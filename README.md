@@ -59,7 +59,7 @@ azure-cloud-resume/
 Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ### Certification
-- [ ] **1. Certification** — Earn the AZ-900: Microsoft Azure Fundamentals certification.
+- [x] **1. Certification** — Earn the AZ-900: Microsoft Azure Fundamentals certification.
 
 ### Frontend
 - [ ] **2. HTML** — Build the resume using HTML.
@@ -94,7 +94,11 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ## Certification
 
-![AZ-900 Certification Link][https://learn.microsoft.com/api/credentials/share/en-us/JD-0113/AA263BB10BC58AD6?sharingId=7F180DC54DF78889]
+✅ **AZ-900: Microsoft Azure Fundamentals** — Achieved
+
+[![AZ-900 Credential](https://img.shields.io/badge/AZ--900-Certified-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://learn.microsoft.com/api/credentials/share/en-us/JD-0113/AA263BB10BC58AD6?sharingId=7F180DC54DF78889)
+
+> [View Credential](https://learn.microsoft.com/api/credentials/share/en-us/JD-0113/AA263BB10BC58AD6?sharingId=7F180DC54DF78889)
 
 ---
 
@@ -125,7 +129,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/azure-cloud-resume.git
+git clone https://github.com/ctrl-jo/Cloud-Resume-Challenge-Azure.git
 cd azure-cloud-resume
 
 # Backend — Install Python dependencies
@@ -150,6 +154,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - [Forrest Brazeal](https://forrestbrazeal.com/) — Creator of the Cloud Resume Challenge
 - [The Cloud Resume Challenge](https://cloudresumechallenge.dev/) — The original challenge that inspired this project
 - [Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/) — Official Azure docs
-
-
-[def]: https://learn.microsoft.com/api/credentials/share/en-us/JD-0113/AA263BB10BC58AD6?sharingId=7F180DC54DF78889
