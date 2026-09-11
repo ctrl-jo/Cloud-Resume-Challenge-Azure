@@ -62,8 +62,8 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 - [x] **1. Certification** — Earn the AZ-900: Microsoft Azure Fundamentals certification.
 
 ### Frontend
-- [ ] **2. HTML** — Build the resume using HTML.
-- [ ] **3. CSS** — Style the resume with CSS.
+- [x] **2. HTML** — Build the resume using HTML.
+- [x] **3. CSS** — Style the resume with CSS.
 - [ ] **4. Static Website** — Deploy the resume as an Azure Storage static website.
 - [ ] **5. HTTPS** — Enable HTTPS via Azure CDN.
 - [ ] **6. DNS** — Configure a custom domain name to point to the CDN endpoint.

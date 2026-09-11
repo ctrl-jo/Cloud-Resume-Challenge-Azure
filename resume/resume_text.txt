@@ -1,0 +1,33 @@
+JOSEPH MERCADO  
++639686282212 | josephmercado800@gmail.com | linkedin.com/in/jdm-tech | github.com/ctrl-jo 
+EDUCATION  
+Batangas State University - JPLPC Malvar Campus | Malvar, Batangas, Philippines | Bachelor of Science in   
+Information Technology | 2024 – Present 
+●​ Certifications & Professional Development: Microsoft Certified: Azure Fundamentals, GitHub Foundations, 
+eGovPh Hackathon 2026: Competitor / Participant, Claude Code 101, freeCodeCamp: Responsive Web Design 
+EXPERIENCE 
+Technical Content Creator (Tech & AI) | March 2026 – Present | Independent | Tanauan City, Philippines 
+●​ Script and produce technical content documenting AI progressions, automation tutorials, and web development 
+across TikTok. 
+●​ Distill complex technical architectures and AI workflow concepts into accessible, engaging formats for diverse 
+digital audiences. 
+PROJECTS 
+AyudaTrack – eGovPH Mobile App Solution Service | React, TypeScript, Vite, Express, Firestore | Jul. 2026 
+●​ Engineered a proposed solution service for the official eGovPH Mobile App during the eGovPH Hackathon 2026, 
+advancing to the Top 46 out of 600+ participants. 
+●​ Integrated authorized official eGovPH platform APIs (platforms.e.gov.ph) and PhilSys eVerify to build a secure 
+"Once-Only Data" pipeline, automating document retrieval and verification for national aid programs (4Ps, Social 
+Pension, AICS, and fuel subsidies). 
+●​ Designed backend architecture and validated core system logic using Express, Firestore, and agentic coding 
+workflows, implementing smart appointment scheduling to replace redundant paperwork and eliminate physical 
+queues (pila). 
+●​ Developed an accessible, citizen-centered frontend using React, TypeScript, and Vite, featuring real-time 
+application tracking, bilingual localization (English/Filipino), and text-to-speech integration.  
+TECHNICAL SKILLS 
+ 
+●​ Languages & Frameworks: TypeScript, JavaScript, React, Next.js, Node.js, REST APIs, Tailwind CSS 
+●​ Databases: PostgreSQL, MySQL, Supabase 
+●​ AI & Automation: Anthropic, OpenAI, OpenRouter, AI Agents, n8n 
+●​ DevOps & Cloud: Git, GitHub, Vercel, Docker, Microsoft Azure, Google Cloud 
+●​ Tools & IDEs: VS Code, Google Antigravity IDE, Cursor 
+ 

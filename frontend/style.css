@@ -1,0 +1,430 @@
+/* ============================================================
+   CLOUD RESUME — REFACTORED STYLE SYSTEM
+   Palette:  Custom dark tones + warm amber accent
+   Fonts:    DM Serif Display (headings) + IBM Plex Mono (body)
+   Layout:   Asymmetric 2-column CSS Grid (label | content)
+   UI:       Sharp edges, flat backgrounds, strong borders
+   ============================================================ */
+
+/* ---------- RESET & BASE ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Custom palette — not utility defaults */
+    --bg-base:       #0c0c0f;
+    --bg-surface:    #141418;
+    --bg-raised:     #1a1a21;
+    --bg-inset:      #111114;
+
+    --text-bright:   #e2dfd8;
+    --text-body:     #a8a49a;
+    --text-dim:      #5e5b55;
+
+    --accent:        #d4a24e;
+    --accent-dim:    #9b7636;
+    --accent-wash:   rgba(212, 162, 78, 0.08);
+
+    --border-hard:   #2a2a30;
+    --border-subtle: #1e1e24;
+
+    --transition: 0.15s ease;
+
+    --gutter: 2rem;
+    --page-max: 960px;
+    --label-width: 160px;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.75;
+    background-color: var(--bg-base);
+    color: var(--text-body);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--text-bright);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------- HEADER / HERO ---------- */
+#hero {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 5rem var(--gutter) 3rem;
+    border-bottom: 2px solid var(--border-hard);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter);
+    align-items: end;
+}
+
+#hero h1 {
+    font-family: 'DM Serif Display', 'Georgia', serif;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--text-bright);
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-hard);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact-links a {
+    font-size: 0.82rem;
+    color: var(--text-body);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid transparent;
+    transition: all var(--transition);
+    width: fit-content;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent-dim);
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+#resume-body {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 0 var(--gutter) 4rem;
+}
+
+/* ---------- SECTION — asymmetric 2-col ---------- */
+.section {
+    display: grid;
+    grid-template-columns: var(--label-width) 1fr;
+    gap: var(--gutter);
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-label {
+    position: relative;
+}
+
+.section-title {
+    font-family: 'DM Serif Display', 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    position: sticky;
+    top: 2rem;
+}
+
+.section-content {
+    min-width: 0;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-hard);
+    border-radius: 0;
+    padding: 1.5rem;
+    transition: border-color var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent-dim);
+}
+
+.card + .card {
+    margin-top: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-header h3 {
+    font-family: 'DM Serif Display', 'Georgia', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-bright);
+    line-height: 1.35;
+}
+
+.subtitle {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    margin-top: 0.25rem;
+}
+
+.tech-stack {
+    color: var(--accent-dim);
+    font-weight: 500;
+}
+
+.location {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.date-badge {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    padding: 0.25rem 0.65rem;
+    white-space: nowrap;
+    border-radius: 0;
+}
+
+/* ---------- DETAILS LIST ---------- */
+.details-list {
+    padding-left: 0;
+}
+
+.details-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+.details-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-dim);
+    font-weight: 600;
+}
+
+.details-list li strong {
+    color: var(--text-bright);
+}
+
+/* ---------- CERTIFICATIONS ---------- */
+.cert-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.cert-item {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background var(--transition);
+}
+
+.cert-item:first-child {
+    border-top: 1px solid var(--border-subtle);
+}
+
+.cert-item:hover {
+    background: var(--accent-wash);
+}
+
+.cert-marker {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-dim);
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    width: 1.8rem;
+}
+
+.cert-item strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-bright);
+}
+
+.cert-item p {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 0.1rem;
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category h3 {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border-hard);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-body);
+    background: var(--bg-raised);
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border-hard);
+    border-radius: 0;
+    transition: all var(--transition);
+}
+
+.tag:hover {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+}
+
+/* ---------- FOOTER ---------- */
+#site-footer {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 2rem var(--gutter);
+    border-top: 2px solid var(--border-hard);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.visitor-counter {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+}
+
+.count-highlight {
+    font-weight: 600;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.footer-note {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+    :root {
+        --gutter: 1.25rem;
+        --label-width: 100%;
+    }
+
+    #hero {
+        padding: 3rem var(--gutter) 2rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        position: static;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border-hard);
+    }
+
+    .card-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .date-badge {
+        align-self: flex-start;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #site-footer {
+        padding: 1.5rem var(--gutter);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
