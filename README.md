@@ -66,7 +66,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 ### Frontend
 - [x] **2. HTML** — Build the resume using HTML.
 - [x] **3. CSS** — Style the resume with CSS.
-- [ ] **4. Static Website** — Deploy the resume as an Azure Storage static website.
+- [x] **4. Static Website** — Deploy the resume as an Azure Storage static website.
 - [ ] **5. HTTPS** — Enable HTTPS via Azure CDN.
 - [ ] **6. DNS** — Configure a custom domain name to point to the CDN endpoint.
 
@@ -106,11 +106,9 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ## Live Site
 
-<!-- Update these links once the site is deployed -->
-
 | Resource       | URL |
 |----------------|-----|
-| **Resume Site** | _Coming soon_ |
+| **Resume Site** | https://jdmcloudresumest.z7.web.core.windows.net/ |
 | **API Endpoint**| _Coming soon_ |
 
 ---
