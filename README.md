@@ -49,6 +49,8 @@ azure-cloud-resume/
 ├── frontend/          # HTML, CSS, JS for the resume website
 ├── backend/           # Azure Functions (Python) for the visitor counter API
 ├── reference/         # Architecture diagrams, notes, and reference material
+├── resume/            # Source resume file (PDF) used for website content
+├── LICENSE            # MIT License
 └── README.md          # Project documentation (you are here)
 ```
 
