@@ -1,0 +1,38 @@
+# ===========================
+# Azure Cloud Resume - .gitignore
+# ===========================
+
+# ----- Local Azure config notes -----
+azure-setup-notes.md
+
+# ----- Python (backend / Azure Functions) -----
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+.env.local
+local.settings.json
+
+# ----- Node (if used for tooling) -----
+node_modules/
+npm-debug.log*
+
+# ----- IDE / Editor -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- Azure Functions -----
+bin/
+obj/
+.python_packages/
+
+# ----- Temporary files -----
+*.tmp
+*.log
