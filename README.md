@@ -15,15 +15,15 @@ This project demonstrates hands-on cloud skills by deploying a personal resume a
 └──────────────┬──────────────────────────────────┬───────────────────┘
                │                                  │
                ▼                                  ▼
-┌──────────────────────────┐       ┌───────────────────────────────┐
-│       Frontend           │       │          Backend              │
-│                          │       │                               │
-│  HTML / CSS / JavaScript │       │  Azure Functions (Python)     │
-│         ▼                │       │         ▼                     │
-│  Azure Blob Storage      │       │  Azure CosmosDB               │
-│  (Static Website)        │       │  (Visitor Counter - Table API)│
-│         ▼                │       │                               │
-│  Azure CDN               │       └───────────────────────────────┘
+┌──────────────────────────┐       ┌────────────────────────────────┐
+│       Frontend           │       │          Backend               │
+│                          │       │                                │
+│  HTML / CSS / JavaScript │       │  Azure Functions (Python)      │
+│         ▼                │       │         ▼                      │
+│  Azure Blob Storage      │       │  Azure CosmosDB                │
+│  (Static Website)        │       │  (Visitor Counter - Table API) │
+│         ▼                │       │                                │
+│  Azure CDN               │       └────────────────────────────────┘
 │  (HTTPS + Custom Domain) │
 └──────────────────────────┘
 ```
