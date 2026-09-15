@@ -23,7 +23,7 @@ This project demonstrates hands-on cloud skills by deploying a personal resume a
 │  Azure Blob Storage      │       │  Azure CosmosDB                │
 │  (Static Website)        │       │  (Visitor Counter - Table API) │
 │         ▼                │       │                                │
-│  Azure CDN               │       └────────────────────────────────┘
+│  Cloudflare CDN          │       └────────────────────────────────┘
 │  (HTTPS + Custom Domain) │
 └──────────────────────────┘
 ```
@@ -34,7 +34,7 @@ This project demonstrates hands-on cloud skills by deploying a personal resume a
 |---------------|-----------------------------------|----------------------------------------------|
 | **Frontend**  | HTML / CSS / JavaScript           | Resume layout, styling, and visitor counter display |
 | **Hosting**   | Azure Blob Storage (Static Site)  | Serves the static website files              |
-| **CDN**       | Azure CDN                         | HTTPS, custom domain, caching, and global distribution |
+| **CDN / DNS** | Cloudflare (Edge Proxy + DNS)     | Global Anycast CDN, TLS 1.2+ HTTPS, and custom domain routing |
 | **API**       | Azure Functions (Python)          | Serverless HTTP-triggered API for the visitor counter |
 | **Database**  | Azure CosmosDB (Table API)        | Stores and retrieves the visitor count        |
 | **CI/CD**     | GitHub Actions                    | Automated testing, build, and deployment pipelines |
@@ -67,8 +67,8 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 - [x] **2. HTML** — Build the resume using HTML.
 - [x] **3. CSS** — Style the resume with CSS.
 - [x] **4. Static Website** — Deploy the resume as an Azure Storage static website.
-- [ ] **5. HTTPS** — Enable HTTPS via Azure CDN.
-- [ ] **6. DNS** — Configure a custom domain name to point to the CDN endpoint.
+- [x] **5. HTTPS** — Enable HTTPS via Cloudflare edge SSL/TLS.
+- [x] **6. DNS** — Configure custom domain (jdmercado.site) pointing to the site.
 
 ### Backend
 - [ ] **7. JavaScript** — Add a visitor counter to the site using JavaScript.
@@ -106,10 +106,11 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ## Live Site
 
-| Resource       | URL |
-|----------------|-----|
-| **Resume Site** | https://jdmcloudresumest.z7.web.core.windows.net/ |
-| **API Endpoint**| _Coming soon_ |
+| Resource            | URL |
+|---------------------|-----|
+| **Live Resume**     | [https://jdmercado.site](https://jdmercado.site) (or [https://www.jdmercado.site](https://www.jdmercado.site)) |
+| **Azure Origin**    | https://jdmcloudresumest.z7.web.core.windows.net/ |
+| **API Endpoint**    | _Coming soon_ |
 
 ---
 
