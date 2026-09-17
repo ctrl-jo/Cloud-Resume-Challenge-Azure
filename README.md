@@ -72,7 +72,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ### Backend
 - [x] **7. JavaScript** — Add a visitor counter to the site using JavaScript.
-- [ ] **8. Database** — Create an Azure CosmosDB table to store the visitor count.
+- [x] **8. Database** — Create an Azure CosmosDB table to store the visitor count.
 - [ ] **9. API** — Build an Azure Function (HTTP-triggered, Python) to interact with CosmosDB.
 - [ ] **10. Python** — Write the Azure Function logic in Python.
 
