@@ -61,18 +61,18 @@ azure-cloud-resume/
 Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ### Certification
-- [x] **1. Certification** — Earn the AZ-900: Microsoft Azure Fundamentals certification.
+- [x] **2026-09-01** | **1. Certification** — Earn the AZ-900: Microsoft Azure Fundamentals certification.
 
 ### Frontend
-- [x] **2. HTML** — Build the resume using HTML.
-- [x] **3. CSS** — Style the resume with CSS.
-- [x] **4. Static Website** — Deploy the resume as an Azure Storage static website.
-- [x] **5. HTTPS** — Enable HTTPS via Cloudflare edge SSL/TLS.
-- [x] **6. DNS** — Configure custom domain (jdmercado.site) pointing to the site.
+- [x] **2026-09-11** | **2. HTML** — Build the resume using HTML.
+- [x] **2026-09-11** | **3. CSS** — Style the resume with CSS.
+- [x] **2026-09-13** | **4. Static Website** — Deploy the resume as an Azure Storage static website.
+- [x] **2026-09-15** | **5. HTTPS** — Enable HTTPS via Cloudflare edge SSL/TLS.
+- [x] **2026-09-15** | **6. DNS** — Configure custom domain (jdmercado.site) pointing to the site.
 
 ### Backend
-- [x] **7. JavaScript** — Add a visitor counter to the site using JavaScript.
-- [x] **8. Database** — Create an Azure CosmosDB table to store the visitor count.
+- [x] **2026-09-16** | **7. JavaScript** — Add a visitor counter to the site using JavaScript.
+- [x] **2026-09-17** | **8. Database** — Create an Azure CosmosDB table to store the visitor count.
 - [ ] **9. API** — Build an Azure Function (HTTP-triggered, Python) to interact with CosmosDB.
 - [ ] **10. Python** — Write the Azure Function logic in Python.
 
