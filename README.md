@@ -80,7 +80,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 - [x] **2026-09-19** | **11. Tests** — Write tests for the Python Azure Function code.
 
 ### Infrastructure as Code
-- [ ] **12. Infrastructure as Code** — Define Azure resources using ARM/Bicep templates.
+- [x] **2026-09-19** | **12. Infrastructure as Code** — Define Azure resources using ARM/Bicep templates.
 
 ### CI/CD (Backend)
 - [ ] **13. Source Control** — Store backend code in a GitHub repository.
