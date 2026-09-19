@@ -77,7 +77,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 - [x] **2026-09-18** | **10. Python** — Write the Azure Function logic in Python.
 
 ### Testing
-- [ ] **11. Tests** — Write tests for the Python Azure Function code.
+- [x] **2026-09-19** | **11. Tests** — Write tests for the Python Azure Function code.
 
 ### Infrastructure as Code
 - [ ] **12. Infrastructure as Code** — Define Azure resources using ARM/Bicep templates.
