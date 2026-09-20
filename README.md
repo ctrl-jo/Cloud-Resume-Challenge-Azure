@@ -48,6 +48,7 @@ This project demonstrates hands-on cloud skills by deploying a personal resume a
 azure-cloud-resume/
 ├── frontend/          # HTML, CSS, JS for the resume website
 ├── backend/           # Azure Functions (Python) for the visitor counter API
+├── infra/             # Infrastructure as Code (Bicep) for Azure resources
 ├── reference/         # Architecture diagrams, notes, and reference material
 ├── resume/            # Source resume file (PDF) used for website content
 ├── LICENSE            # MIT License
