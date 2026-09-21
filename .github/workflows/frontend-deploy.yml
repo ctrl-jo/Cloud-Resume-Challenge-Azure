@@ -1,0 +1,39 @@
+# ============================================================
+# CI/CD Pipeline — Frontend (Azure Blob Storage $web)
+# ============================================================
+# Triggers on pushes to main that modify frontend/ files.
+# Job: Deploy — synchronizes frontend/ files to $web container
+# ============================================================
+
+name: Frontend CI/CD
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "frontend/**"
+  workflow_dispatch:
+
+env:
+  AZURE_STORAGE_ACCOUNT: "jdmcloudresumest"
+  FRONTEND_SOURCE_DIR: "frontend"
+
+jobs:
+  deploy:
+    name: Deploy to Azure Storage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Azure Blob Storage ($web)
+        uses: azure/cli@v2
+        with:
+          inlineScript: |
+            az storage blob upload-batch \
+              --account-name ${{ env.AZURE_STORAGE_ACCOUNT }} \
+              --destination '$web' \
+              --source ${{ env.FRONTEND_SOURCE_DIR }} \
+              --overwrite true \
+              --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"

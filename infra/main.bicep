@@ -150,6 +150,7 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
         allowedOrigins: [
           'https://jdmercado.site'
           'https://www.jdmercado.site'
+          'https://jdmcloudresumest.z7.web.core.windows.net'
           'https://portal.azure.com'
         ]
         supportCredentials: false

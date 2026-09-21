@@ -5,8 +5,8 @@
  * Temporarily mocked until Step 9/10 (API & Backend implementation).
  */
 
-// Placeholder: Will be replaced with the live Azure Function endpoint URL in Step 9/10
-const API_URL = ''; 
+// Live Azure Function endpoint (deployed in Step 14)
+const API_URL = 'https://func-cloud-resume-jdm.azurewebsites.net/api/GetResumeCounter';
 
 /**
  * Retrieves the visitor count from the API.

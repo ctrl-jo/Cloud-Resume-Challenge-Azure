@@ -88,7 +88,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 - [x] **2026-09-21** | **14. CI/CD (Backend)** — Set up GitHub Actions to test and deploy the backend automatically.
 
 ### CI/CD (Frontend)
-- [ ] **15. CI/CD (Frontend)** — Set up GitHub Actions to deploy frontend changes to Azure Storage automatically.
+- [x] **2026-09-21** | **15. CI/CD (Frontend)** — Set up GitHub Actions to deploy frontend changes to Azure Storage automatically.
 
 ### Documentation
 - [ ] **16. Blog Post** — Write a blog post documenting the journey and lessons learned.
