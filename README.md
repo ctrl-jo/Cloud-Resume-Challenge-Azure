@@ -85,7 +85,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ### CI/CD (Backend)
 - [x] **2026-09-19** | **13. Source Control** — Store backend code in a GitHub repository.
-- [ ] **14. CI/CD (Backend)** — Set up GitHub Actions to test and deploy the backend automatically.
+- [x] **2026-09-21** | **14. CI/CD (Backend)** — Set up GitHub Actions to test and deploy the backend automatically.
 
 ### CI/CD (Frontend)
 - [ ] **15. CI/CD (Frontend)** — Set up GitHub Actions to deploy frontend changes to Azure Storage automatically.
