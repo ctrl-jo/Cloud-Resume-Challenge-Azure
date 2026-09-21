@@ -111,7 +111,7 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 |---------------------|-----|
 | **Live Resume**     | [https://jdmercado.site](https://jdmercado.site) (or [https://www.jdmercado.site](https://www.jdmercado.site)) |
 | **Azure Origin**    | https://jdmcloudresumest.z7.web.core.windows.net/ |
-| **API Endpoint**    | _Coming soon_ |
+| **API Endpoint**    | [https://func-cloud-resume-jdm.azurewebsites.net/api/GetResumeCounter](https://func-cloud-resume-jdm.azurewebsites.net/api/GetResumeCounter) |
 
 ---
 
