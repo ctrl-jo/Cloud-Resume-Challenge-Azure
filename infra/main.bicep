@@ -139,10 +139,6 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
           name: 'FUNCTIONS_WORKER_RUNTIME'
           value: 'python'
         }
-        {
-          name: 'WEBSITE_RUN_FROM_PACKAGE'
-          value: '1'
-        }
         // Cosmos DB Table API connection string — index [4] is "Primary Table Connection String"
         // (index [0] is the SQL connection string, which is incompatible with azure-data-tables SDK)
         {
