@@ -300,15 +300,20 @@ ul {
     border-bottom: 1px solid var(--border-standard);
     transition: background var(--transition), border-left-color var(--transition);
     border-left: 2px solid transparent;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .cert-item:first-child {
     border-top: 1px solid var(--border-standard);
 }
 
-.cert-item:hover {
+.cert-item:hover,
+.cert-item:focus-visible {
     background: var(--bg-secondary);
     border-left: 2px solid var(--accent-primary);
+    outline: none;
 }
 
 .cert-marker {
@@ -319,6 +324,11 @@ ul {
     flex-shrink: 0;
     width: 1.8rem;
     font-family: 'IBM Plex Mono', monospace;
+    transition: color var(--transition);
+}
+
+.cert-item:hover .cert-marker {
+    color: var(--accent-primary);
 }
 
 .cert-item strong {
@@ -326,12 +336,31 @@ ul {
     font-size: 0.88rem;
     font-weight: 500;
     color: var(--text-heading);
+    transition: color var(--transition);
+}
+
+.cert-item:hover strong {
+    color: var(--accent-tertiary);
 }
 
 .cert-item p {
     font-size: 0.75rem;
     color: var(--text-muted);
     margin-top: 0.1rem;
+}
+
+.cert-link-icon {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-left: 0.25rem;
+    font-weight: 400;
+    transition: transform var(--transition), color var(--transition);
+}
+
+.cert-item:hover .cert-link-icon {
+    color: var(--accent-tertiary);
+    transform: translate(1px, -1px);
 }
 
 /* ---------- TECHNICAL SKILLS ---------- */
