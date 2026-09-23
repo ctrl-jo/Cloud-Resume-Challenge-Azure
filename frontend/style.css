@@ -1,12 +1,12 @@
 /* ============================================================
-   CLOUD RESUME — REFACTORED STYLE SYSTEM
-   Palette:  Custom dark tones + warm amber accent
-   Fonts:    DM Serif Display (headings) + IBM Plex Mono (body)
-   Layout:   Asymmetric 2-column CSS Grid (label | content)
-   UI:       Sharp edges, flat backgrounds, strong borders
+   CLOUD RESUME — AZURE SYSTEM & "ANTI-AI" EDITORIAL AESTHETIC
+   Palette:  Microsoft Azure Dark System (#0A0E27 / #131A3A)
+   Fonts:    DM Serif Display (headings) + IBM Plex Mono (body/code)
+   Layout:   Asymmetric 2-column CSS Grid (sticky label | content)
+   Rules:    0px sharp corners, hard offset shadows, crisp borders
    ============================================================ */
 
-/* ---------- RESET & BASE ---------- */
+/* ---------- RESET & CSS VARIABLES ---------- */
 *,
 *::before,
 *::after {
@@ -16,28 +16,35 @@
 }
 
 :root {
-    /* Custom palette — not utility defaults */
-    --bg-base:       #0c0c0f;
-    --bg-surface:    #141418;
-    --bg-raised:     #1a1a21;
-    --bg-inset:      #111114;
+    /* 1. Backgrounds */
+    --bg-primary:       #0A0E27;
+    --bg-secondary:     #131A3A;
+    --bg-elevated:      #1A244D;
 
-    --text-bright:   #e2dfd8;
-    --text-body:     #a8a49a;
-    --text-dim:      #5e5b55;
+    /* 2. Accents (Azure System) */
+    --accent-primary:   #0078D4; /* Reserved strictly for primary CTAs / active highlights */
+    --accent-secondary: #378ADD; /* Section titles, link hovers, interactive accents */
+    --accent-tertiary:  #85B7EB; /* Subtle text highlights, visitor counter digits */
 
-    --accent:        #d4a24e;
-    --accent-dim:    #9b7636;
-    --accent-wash:   rgba(212, 162, 78, 0.08);
+    /* 3. Typography */
+    --text-heading:     #FFFFFF; /* Headings (h1-h6), strong tags */
+    --text-body:        #9FA6B2; /* Paragraphs, descriptions, contact links */
+    --text-muted:       #6B7280; /* Subtitles, timestamps, locations, notes */
 
-    --border-hard:   #2a2a30;
-    --border-subtle: #1e1e24;
+    /* 4. Borders */
+    --border-standard:  #2A3352;
+    --border-strong:    #3D4870;
 
-    --transition: 0.15s ease;
+    /* 5. Alan West "Anti-AI" Hard Offset Shadows */
+    --shadow-hard:      3px 3px 0px var(--border-strong);
+    --shadow-accent:    3px 3px 0px var(--accent-primary);
+    --shadow-hover:     4px 4px 0px var(--accent-primary);
 
-    --gutter: 2rem;
-    --page-max: 960px;
-    --label-width: 160px;
+    /* 6. Layout Constants */
+    --transition:       0.15s ease;
+    --gutter:           2rem;
+    --page-max:         960px;
+    --label-width:      160px;
 }
 
 html {
@@ -50,19 +57,19 @@ body {
     font-family: 'IBM Plex Mono', 'Courier New', monospace;
     font-size: 14px;
     line-height: 1.75;
-    background-color: var(--bg-base);
+    background-color: var(--bg-primary);
     color: var(--text-body);
 }
 
 a {
-    color: var(--accent);
+    color: var(--accent-secondary);
     text-decoration: none;
-    transition: color var(--transition);
+    transition: color var(--transition), border-color var(--transition);
 }
 
 a:hover,
 a:focus-visible {
-    color: var(--text-bright);
+    color: var(--accent-tertiary);
 }
 
 ul {
@@ -74,7 +81,7 @@ ul {
     max-width: var(--page-max);
     margin: 0 auto;
     padding: 5rem var(--gutter) 3rem;
-    border-bottom: 2px solid var(--border-hard);
+    border-bottom: 2px solid var(--border-strong);
 }
 
 .hero-grid {
@@ -90,17 +97,17 @@ ul {
     font-weight: 400;
     line-height: 1.0;
     letter-spacing: -0.02em;
-    color: var(--text-bright);
+    color: var(--text-heading);
 }
 
 .tagline {
     font-size: 0.8rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.12em;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-hard);
+    border-bottom: 1px solid var(--border-standard);
 }
 
 .contact-links {
@@ -119,8 +126,8 @@ ul {
 }
 
 .contact-links a:hover {
-    color: var(--accent);
-    border-bottom-color: var(--accent-dim);
+    color: var(--accent-secondary);
+    border-bottom-color: var(--accent-primary);
 }
 
 /* ---------- MAIN LAYOUT ---------- */
@@ -130,13 +137,13 @@ ul {
     padding: 0 var(--gutter) 4rem;
 }
 
-/* ---------- SECTION — asymmetric 2-col ---------- */
+/* ---------- SECTION — Asymmetric 2-Column ---------- */
 .section {
     display: grid;
     grid-template-columns: var(--label-width) 1fr;
     gap: var(--gutter);
     padding: 2.5rem 0;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-standard);
 }
 
 .section-label {
@@ -145,9 +152,9 @@ ul {
 
 .section-title {
     font-family: 'DM Serif Display', 'Georgia', serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 400;
-    color: var(--accent);
+    color: var(--accent-secondary);
     letter-spacing: -0.01em;
     position: sticky;
     top: 2rem;
@@ -157,21 +164,24 @@ ul {
     min-width: 0;
 }
 
-/* ---------- CARDS ---------- */
+/* ---------- CARDS (Anti-AI Brutalist Geometry) ---------- */
 .card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-hard);
-    border-radius: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-standard);
+    border-radius: 0px;
     padding: 1.5rem;
-    transition: border-color var(--transition);
+    box-shadow: var(--shadow-hard);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .card:hover {
-    border-color: var(--accent-dim);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-hover);
+    transform: translate(-1px, -1px);
 }
 
 .card + .card {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
 }
 
 .card-header {
@@ -184,26 +194,54 @@ ul {
 
 .card-header h3 {
     font-family: 'DM Serif Display', 'Georgia', serif;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    color: var(--text-bright);
+    color: var(--text-heading);
     line-height: 1.35;
+}
+
+.card-header h3 a {
+    color: var(--text-heading);
+}
+
+.card-header h3 a:hover {
+    color: var(--accent-tertiary);
 }
 
 .subtitle {
     font-size: 0.82rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
     margin-top: 0.25rem;
 }
 
 .tech-stack {
-    color: var(--accent-dim);
+    color: var(--accent-secondary);
     font-weight: 500;
+}
+
+.demo-link {
+    display: inline-block;
+    color: var(--text-heading) !important;
+    background: var(--accent-primary);
+    padding: 0.1rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--accent-primary);
+    border-radius: 0px;
+    box-shadow: 2px 2px 0px var(--border-strong);
+    transition: all var(--transition);
+}
+
+.demo-link:hover {
+    background: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    box-shadow: 2px 2px 0px var(--text-heading);
+    transform: translate(-1px, -1px);
 }
 
 .location {
     font-size: 0.78rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
@@ -212,11 +250,13 @@ ul {
     flex-shrink: 0;
     font-size: 0.75rem;
     font-weight: 500;
-    color: var(--accent);
-    border: 1px solid var(--accent-dim);
+    color: var(--accent-tertiary);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-strong);
     padding: 0.25rem 0.65rem;
     white-space: nowrap;
-    border-radius: 0;
+    border-radius: 0px;
+    box-shadow: 2px 2px 0px var(--accent-primary);
 }
 
 /* ---------- DETAILS LIST ---------- */
@@ -237,15 +277,15 @@ ul {
     content: '—';
     position: absolute;
     left: 0;
-    color: var(--accent-dim);
+    color: var(--accent-secondary);
     font-weight: 600;
 }
 
 .details-list li strong {
-    color: var(--text-bright);
+    color: var(--text-heading);
 }
 
-/* ---------- CERTIFICATIONS ---------- */
+/* ---------- CREDENTIALS / CERTIFICATIONS ---------- */
 .cert-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -256,42 +296,45 @@ ul {
     display: flex;
     align-items: baseline;
     gap: 1rem;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--border-subtle);
-    transition: background var(--transition);
+    padding: 0.9rem 0.75rem;
+    border-bottom: 1px solid var(--border-standard);
+    transition: background var(--transition), border-left-color var(--transition);
+    border-left: 2px solid transparent;
 }
 
 .cert-item:first-child {
-    border-top: 1px solid var(--border-subtle);
+    border-top: 1px solid var(--border-standard);
 }
 
 .cert-item:hover {
-    background: var(--accent-wash);
+    background: var(--bg-secondary);
+    border-left: 2px solid var(--accent-primary);
 }
 
 .cert-marker {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    color: var(--accent-dim);
+    color: var(--accent-secondary);
     letter-spacing: 0.05em;
     flex-shrink: 0;
     width: 1.8rem;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .cert-item strong {
     display: block;
     font-size: 0.88rem;
     font-weight: 500;
-    color: var(--text-bright);
+    color: var(--text-heading);
 }
 
 .cert-item p {
     font-size: 0.75rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
     margin-top: 0.1rem;
 }
 
-/* ---------- SKILLS ---------- */
+/* ---------- TECHNICAL SKILLS ---------- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -301,47 +344,47 @@ ul {
 .skill-category h3 {
     font-size: 0.7rem;
     font-weight: 600;
-    color: var(--text-dim);
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 0.65rem;
     padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border-hard);
+    border-bottom: 1px solid var(--border-standard);
 }
 
 .tag-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.45rem;
 }
 
 .tag {
     font-size: 0.78rem;
     font-weight: 500;
     color: var(--text-body);
-    background: var(--bg-raised);
+    background: var(--bg-secondary);
     padding: 0.25rem 0.6rem;
-    border: 1px solid var(--border-hard);
-    border-radius: 0;
+    border: 1px solid var(--border-standard);
+    border-radius: 0px;
+    box-shadow: 2px 2px 0px var(--bg-primary);
     transition: all var(--transition);
 }
 
 .tag:hover {
-    color: var(--accent);
-    border-color: var(--accent-dim);
+    color: var(--text-heading);
+    background: var(--bg-elevated);
+    border-color: var(--accent-secondary);
+    box-shadow: 2px 2px 0px var(--accent-secondary);
+    transform: translate(-1px, -1px);
 }
 
-/* ---------- FOOTER ---------- */
+/* ---------- FOOTER & VISITOR COUNTER ---------- */
 #site-footer {
     max-width: var(--page-max);
     margin: 0 auto;
-    padding: 2rem var(--gutter);
-    border-top: 2px solid var(--border-hard);
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    padding: 2.5rem var(--gutter);
+    border-top: 2px solid var(--border-strong);
+    background: var(--bg-primary);
 }
 
 .footer-content {
@@ -355,26 +398,32 @@ ul {
 
 .visitor-counter {
     font-size: 0.82rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 .count-highlight {
     font-weight: 600;
-    color: var(--accent);
+    color: var(--accent-tertiary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-strong);
+    padding: 0.15rem 0.5rem;
+    border-radius: 0px;
+    box-shadow: 2px 2px 0px var(--accent-primary);
     font-variant-numeric: tabular-nums;
+    margin-left: 0.25rem;
 }
 
 .footer-note {
     font-size: 0.78rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
 .copyright {
     font-size: 0.75rem;
-    color: var(--text-dim);
+    color: var(--text-muted);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- RESPONSIVE LAYOUT ---------- */
 @media (max-width: 700px) {
     :root {
         --gutter: 1.25rem;
@@ -403,7 +452,7 @@ ul {
     .section-title {
         position: static;
         padding-bottom: 0.5rem;
-        border-bottom: 1px solid var(--border-hard);
+        border-bottom: 1px solid var(--border-standard);
     }
 
     .card-header {
@@ -420,11 +469,11 @@ ul {
     }
 
     #site-footer {
-        padding: 1.5rem var(--gutter);
+        padding: 1.75rem var(--gutter);
     }
 
     .footer-content {
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.5rem;
     }
 }
