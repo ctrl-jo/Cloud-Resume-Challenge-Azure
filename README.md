@@ -114,33 +114,23 @@ Track progress across all 16 steps of the Cloud Resume Challenge:
 
 ---
 
-## Getting Started
+## Development Framework
 
-### Prerequisites
+- **Cloud Platform:** [Microsoft Azure](https://azure.microsoft.com/)
+- **Infrastructure as Code:** Azure Bicep & [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- **Serverless Runtime:** [Azure Functions Core Tools v4](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)
+- **Backend Runtime:** Python 3.12
+- **Testing Framework:** `pytest` & `unittest.mock`
+- **Automation / CI/CD:** GitHub Actions
 
-- [Azure Account](https://azure.microsoft.com/en-us/free/) (Free tier available)
-- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local)
-- [Python 3.9+](https://www.python.org/downloads/)
-- [Node.js](https://nodejs.org/) (for Azure Functions tooling)
-- [Git](https://git-scm.com/)
-- [Visual Studio Code](https://code.visualstudio.com/) (recommended)
+### Development Architecture & Workflow
 
-### Local Development
+This project was developed, tested, and validated in an isolated local environment prior to automated cloud deployment:
 
-```bash
-# Clone the repository
-git clone https://github.com/ctrl-jo/Cloud-Resume-Challenge-Azure.git
-cd azure-cloud-resume
-
-# Backend — Install Python dependencies
-cd backend
-pip install -r requirements.txt
-
-# Frontend — Open index.html in your browser
-cd ../frontend
-# Open index.html directly or use a local server
-```
+- **Backend API Development:** Developed using the Azure Functions Python v2 programming model inside an isolated Python 3.12 virtual environment (`.venv`). Local serverless execution and HTTP triggers were simulated using Azure Functions Core Tools (`func start`), with credentials managed locally via `local.settings.json`.
+- **Unit Testing & Isolation:** Verified using `pytest` and `unittest.mock` to validate database handling, HTTP response contracts, and CORS headers without making live calls to Cosmos DB.
+- **Frontend Validation:** Tested using a local development server to simulate browser origin behaviors and eliminate CORS conflicts before deploying to Azure Storage `$web`.
+- **Automated CI/CD:** Pushes to `main` trigger GitHub Actions workflows that automatically run unit tests, package dependencies, and deploy the frontend and backend directly to Azure.
 
 ---
 
