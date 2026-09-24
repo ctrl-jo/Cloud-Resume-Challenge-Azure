@@ -51,7 +51,6 @@ azure-cloud-resume/
 ├── infra/             # Infrastructure as Code (Bicep) for Azure resources
 ├── reference/         # Architecture diagrams, notes, and reference material
 ├── resume/            # Source resume file (PDF) used for website content
-├── LICENSE            # MIT License
 └── README.md          # Project documentation (you are here)
 ```
 
@@ -145,9 +144,11 @@ cd ../frontend
 
 ---
 
-## License
+## Copyright & Legal
 
-This project is open source and available under the [MIT License](LICENSE).
+© 2026 Joseph Mercado. All Rights Reserved.
+
+This repository contains my personal resume, credentials, and custom portfolio design. It is provided publicly for viewing and evaluation purposes only. You may not copy, modify, distribute, or reuse the code, design, or content without explicit permission. This is not an open-source template.
 
 ---
 
