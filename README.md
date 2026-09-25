@@ -46,6 +46,7 @@ This project demonstrates hands-on cloud skills by deploying a personal resume a
 
 ```
 azure-cloud-resume/
+├── .github/workflows/ # GitHub Actions CI/CD workflows (frontend & backend)
 ├── frontend/          # HTML, CSS, JS for the resume website
 ├── backend/           # Azure Functions (Python) for the visitor counter API
 ├── infra/             # Infrastructure as Code (Bicep) for Azure resources
