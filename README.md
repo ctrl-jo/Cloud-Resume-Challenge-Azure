@@ -4,6 +4,8 @@ A full-stack cloud resume built on Microsoft Azure, inspired by [The Cloud Resum
 
 This project demonstrates hands-on cloud skills by deploying a personal resume as a static website with a serverless visitor counter — all hosted, secured, and automated on Azure.
 
+[![Joseph Mercado — Cloud Resume Preview](resume/jdmercado-screenshot.png)](https://jdmercado.site)
+
 ---
 
 ## Architecture Overview
@@ -51,7 +53,7 @@ azure-cloud-resume/
 ├── backend/           # Azure Functions (Python) for the visitor counter API
 ├── infra/             # Infrastructure as Code (Bicep) for Azure resources
 ├── reference/         # Architecture diagrams, notes, and reference material
-├── resume/            # Source resume file (PDF) used for website content
+├── resume/            # Source resume (PDF) and portfolio preview screenshot
 └── README.md          # Project documentation (you are here)
 ```
 
