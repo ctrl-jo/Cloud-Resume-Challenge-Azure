@@ -474,6 +474,21 @@ ul {
     color: var(--text-muted);
 }
 
+/* Stacks the visitor counter + last-updated stamp as one footer column */
+.footer-telemetry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.last-updated {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+}
+
 .count-highlight {
     font-weight: 600;
     color: var(--accent-tertiary);

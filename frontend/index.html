@@ -25,7 +25,7 @@
     <!-- Favicon: Animated 8-bit SVG with PNG Fallback -->
     <!--<link rel="icon" type="image/svg+xml" href="jdm-favicon.png">-->
     <link rel="icon" type="image/png" sizes="512x512" href="jdm-favicon.png">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -194,6 +194,23 @@
                 <h2 class="section-title">Projects</h2>
             </div>
             <div class="section-content">
+                <!-- Cloud Resume Challenge – Azure -->
+                <article class="card project-card">
+                    <div class="card-header">
+                        <div>
+                            <h3><a href="https://github.com/ctrl-jo/Cloud-Resume-Challenge-Azure" target="_blank" rel="noopener noreferrer">Cloud Resume Challenge — Azure</a></h3>
+                            <p class="subtitle tech-stack">Azure Functions · Python · Cosmos DB · Bicep · GitHub Actions · <a href="https://github.com/ctrl-jo/Cloud-Resume-Challenge-Azure" target="_blank" rel="noopener noreferrer" class="demo-link">Source ↗</a></p>
+                        </div>
+                        <span class="date-badge">Sep 2026</span>
+                    </div>
+                    <ul class="details-list">
+                        <li>Deployed personal resume site on Azure Blob Storage with custom domain (jdmercado.site) via Cloudflare edge proxy with HTTPS/TLS 1.2+.</li>
+                        <li>Built Python 3.12 serverless Azure Function with Azure Cosmos DB (Table API) for visitor tracking, Bicep IaC, pytest unit tests, and dual GitHub Actions CI/CD pipelines.</li>
+                        <li>Completed <strong>all 16 steps</strong> of the Cloud Resume Challenge after earning AZ-900 certification, documenting the build on Dev.to.</li>
+                    </ul>
+                </article>
+
+                <!-- AyudaTrack – eGovPH Mobile App Solution Service -->
                 <article class="card project-card">
                     <div class="card-header">
                         <div>
@@ -203,10 +220,9 @@
                         <span class="date-badge">Jul 2026</span>
                     </div>
                     <ul class="details-list">
-                        <li>Engineered a proposed solution service for the official eGovPH Mobile App during the eGovPH Hackathon 2026, advancing to the <strong>Top 46 out of 600+ participants</strong>.</li>
-                        <li>Integrated authorized official eGovPH platform APIs (platforms.e.gov.ph) and PhilSys eVerify to build a secure "Once-Only Data" pipeline, automating document retrieval and verification for national aid programs (4Ps, Social Pension, AICS, and fuel subsidies).</li>
-                        <li>Designed backend architecture and validated core system logic using Express, Firestore, and agentic coding workflows, implementing smart appointment scheduling to replace redundant paperwork and eliminate physical queues.</li>
-                        <li>Developed an accessible, citizen-centered frontend using React, TypeScript, and Vite, featuring real-time application tracking, bilingual localization (English/Filipino), and text-to-speech integration.</li>
+                        <li>Engineered an eGovPH Mobile App solution service during eGovPH Hackathon 2026, placing <strong>Top 46 out of 137 registered teams</strong>.</li>
+                        <li>Integrated official eGovPH APIs and PhilSys eVerify for automated document retrieval and verification across national aid programs (4Ps, Social Pension, AICS, fuel subsidies).</li>
+                        <li>Built an Express/Firestore backend with smart scheduling to eliminate queues, and a React/TypeScript/Vite frontend featuring real-time tracking, bilingual localization, and text-to-speech.</li>
                     </ul>
                 </article>
             </div>
@@ -242,6 +258,7 @@
                     <div class="skill-category">
                         <h3>AI &amp; Automation</h3>
                         <div class="tag-list">
+                            <span class="tag">Google AI</span>
                             <span class="tag">Anthropic</span>
                             <span class="tag">OpenAI</span>
                             <span class="tag">OpenRouter</span>
@@ -264,8 +281,10 @@
                         <h3>Tools &amp; IDEs</h3>
                         <div class="tag-list">
                             <span class="tag">VS Code</span>
-                            <span class="tag">Google Antigravity IDE</span>
+                            <span class="tag">Claude Code</span>
+                            <span class="tag">Codex</span>
                             <span class="tag">Cursor</span>
+                            <span class="tag">Google Antigravity IDE</span>
                         </div>
                     </div>
                 </div>
@@ -277,9 +296,12 @@
     <!-- ===== FOOTER ===== -->
     <footer id="site-footer">
         <div class="footer-content">
-            <p class="visitor-counter">
-                Visitors: <span id="visitor-count" class="count-highlight">—</span>
-            </p>
+            <div class="footer-telemetry">
+                <p class="visitor-counter">
+                    Visitors: <span id="visitor-count" class="count-highlight">—</span>
+                </p>
+                <p class="last-updated">Last updated: <time datetime="2026-10-26">10/26/2026</time></p>
+            </div>
             <p class="footer-note">
                 Built as part of the
                 <a href="https://cloudresumechallenge.dev/docs/the-challenge/azure/" target="_blank" rel="noopener noreferrer">Azure Cloud Resume Challenge</a>.
